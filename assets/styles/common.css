@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+/**** fonts ****/
+/* 'Pretendard Variable' */
+@import url(./pretendardvariable.css);
+/*  
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+*/
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Griffy&display=swap');
+
+/*
+@font-face {
+  font-family: 'Cormorant';
+  font-style: italic;
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cormorant/v21/H4cjBXOCl9bbnla_nHIq6quyoqOOag.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+*/
+/*
+@font-face {
+  font-family: 'Griffy';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/griffy/v22/FwZa7-ox2FQh9kfAQd6F8M0.woff2) format('woff2');
+*/
+
+
+/**** css 변수 ****/
+/* 전역 변수 */
+:root {/* 선언(설정) */
+  --font-family-ko : "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font-family-en : 'Cormorant', Georgia, 'Times New Roman', Times, serif;
+
+
+  --font-size-xxxxl: 12.5rem; /* 200px */ 
+  --font-size-xxxl: 6.25rem; /* 100px */
+  --font-size-xxl: 4.75rem; /* 76px */
+  --font-size-xl: 2.625rem; /* 42px */
+  --font-size-l: 1.5rem; /* 24px */
+  --font-size-lm: 1.25rem; /* 20px */
+  --font-size-ml: 1.125rem; /* 18px */
+  --font-size-m: 1rem; /*** 16px ***/
+  --font-size-ms: 0.875rem; /* 14px */
+
+
+  --color-dark1: #000000;
+  --color-dark2: #2B2B2B;
+
+  --color-gray: #D2D2D2;
+
+  --color-white1: #ffffff;
+  --color-white2: #F2F2F2;
+
+  
+  --line-height: 1.6;
+
+  --spacing-xlg: 2.5rem;/* 40px */
+  --spacing-lg: 2.125rem; /* 34px */
+  --spacing-md: 1.25rem; /* 20px */
+  --spacing-sm: 1.125rem; /* 18px */ 
+  --spacing-xsm: 0.625rem; /* 10px */
+}
+
+
+/*****  모바일 390 기준 양옆 마진 16px 
+/ pc 1900 기준 양옆 마진 250px   *****/
+
+/**** global style ****/
+/* 부드러운 스크롤 */
+html {
+  scroll-behavior: smooth;
+}
+/* 드래그 */
+html ::selection {
+  background-color: var(--color-white2);
+  color: var(--color-dark1);
+}
+/* 스크롤바 */
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+html ::-webkit-scrollbar-track {
+  background-color: var(--color-dark2);
+}
+html ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 1px 10px var(--color-dark2);
+  /* border: 1px solid var(--color-dark1); */
+  /* border-radius: 10px; */
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+.grid-container {
+  display: grid;
+}
+.margin-sm {
+  margin: 0 var(--spacing-sm);
+}
+.margin-md {
+  margin: 0 var(--spacing-md);
+}
+.margin-lg {
+  margin: 0 var(--spacing-lg);
+}
+.padding-sm {
+  padding: 0 var(--spacing-sm);
+}
+.padding-md {
+  padding: 0 var(--spacing-md);
+}
+.padding-lg {
+  padding: 0 var(--spacing-lg);
+}
+
+
+
+
+
+/**** body ****/
+body {
+  /* css 변수 적용 var() */
+  font-family: var(--font-family-ko);
+  color: var(--color-dark1);
+  line-height: 1.5;
+  word-break: break-all;
+  word-wrap: break-word;
+  text-transform: capitalize;
+}
+
+
+/* 1020px 이상일 때 */
+@media (min-width:1020px) {
+  /*
+  :root { 
+    --font-main-title-xxlg: 3.5rem;
+    --font-main-title-xlg: 3rem;
+    --font-main-title-lg: 1.7rem;
+    --font-main-title-md: 1.5rem;
+    --font-main-title-sm: 0.95rem;
+
+    --spacing-5xlg: 6.6666rem;120px
+    --spacing-lg: 3.3333rem;60px
+    --spacing-md: 2.2222rem;40px
+    --spacing-sm: 2rem;36px
+    --spacing-xsm: 1.1111rem;20px
+  }
+
+  html {
+    font-size: 18px;
+  }
+
+  .main-title {
+    margin-top: var(--spacing-5xlg);
+  }
+  */
+}

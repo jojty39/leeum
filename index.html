@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title>LEEUM</title>
+
+<!-- og -->
+<meta property="og:title" content="Leeum Museum of Art - 리움미술관">
+<meta property="og:url" content="https://jojty39.github.io/leeum/">
+<!-- <meta property="og:image" content="https://jojty39.github.io/portfolio/images/logoDark.png"> -->
+<meta property="og:image" content="https://jojty39.github.io/Leeum/assets/images/leeum_logo_black.png">
+<meta property="og:description" content="리움미술관 홈페이지입니다.">
+<meta property="og:type" content="website">
+
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/leeum_logo_black.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/leeum-favicon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/leeum-favicon.svg">
+<link rel="manifest" href="./assets/manifest.webmanifest">
+
+<!-- 멀티페이지웹에서 성능 최적화를 고려한다면 link, 관리를 고려한다면 @import -->
+<!-- reset -->
+<link rel="stylesheet" href="./assets/styles/reset.min.css">
+<!-- <link rel="stylesheet" href="./assets/styles/swiper-bundle.min.css"> -->
+
+<!-- 공통 global style -->
+<link rel="stylesheet" href="./assets/styles/common.css">
+<link rel="stylesheet" href="./index.css">
+
+<script src="./assets/scripts/jquery-3.7.1.min.js"></script>
+<!-- <script src="./assets/scripts/swiper-bundle.min.js"></script> -->
+<script defer src="./index.js"></script>
+</head>
+
+<body>
+
+    <!-- header gnb-->
+    <header id="header">
+        <div class="gnb">       
+            <div class="header-left">
+                <a href="#">
+                    <img src="./assets/images/Leeum_Wordmark_White_RGB.png" alt="logo">
+                </a>            
+            </div>
+
+            <ul class="header-right">
+                <li>
+                    <h2><a href="#">방문안내</a></h2> 
+                </li>
+                <li>
+                    <h2><a href="#">전시</a></h2>
+                    <ul>
+                        <li><a href="#">현재전시</a></li>
+                        <li><a href="#">예정전시</a></li>
+                        <li><a href="#">과거전시</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="#">소장품</a></h2>
+                    <ul>
+                        <li><a href="#">고미술</a></li>
+                        <li><a href="#">현대미술</a></li>
+                        <li><a href="#">보존</a></li>
+                        <li><a href="#">수어해설</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="#">배움·연구</a></h2>
+                    <ul>
+                        <li><a href="#">프로그램</a></li>
+                        <li><a href="#">아카이브</a></li>
+                        <li><a href="#">출판</a></li>
+                        <li><a href="#">영상·자료</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="#">멤버십</a></h2>
+                    <ul>
+                        <li><a href="#">가입과 안내</a></li>
+                        <li><a href="#">프로그램과 혜택</a></li>
+                        <li><a href="#">뉴스레터</a></li>
+                        <li><a href="#">멤버쉽 공지</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>        
+    </header> 
+
+        
+    <!-- main-container -->
+    <main class="main-container">
+
+        <div class="main-visual">            
+            <div class="main-visual-video">
+                <video muted loop autoplay poster="./assets/images/main-visual-video-img.png">
+                <!-- <video muted loop autoplay poster="./images/bg_cyclist_and_shadow_grayscale-img.png"> -->
+                <source src="./assets/images/main-bg-Dosan1.mp4" type="video/mp4">
+                </video>        
+            </div>
+        </div><!-- .main-visual__bg -->
+                      
+        <div class="main-new">
+            <div class="wrap">
+                <h2 class="main-section_title">Discover <span class="newline"></span>our ( New ) Collection</h2>
+                
+                <div class="main-new-01">
+                    <div class="main-new-bg">
+
+                            <span class="main-new-subtitle">A rose born in the</span>
+                            <h3 class="main-new-title">EVENING GOLW</h3>
+                            <p class="main-new-desc">일상에서 세련되고 우아한 감각을 경험하세요!</p>
+                            <a class="btn" href="#">
+                                <span>(&nbsp;&nbsp; SHOP NOW &nbsp;&nbsp;)</span>
+                            </a>
+    
+                    </div>
+                </div><!-- .main-best__new -->
+    
+                <div class="container-new"><!--body역할 -->
+                    <div class="container-new-wrap">
+                        <div class="slider-wrapper">
+                            <button id="prev-slide" class="slide-button rounded">&lt;
+                            </button>
+                            <div class="image-list">
+                                <div class="image-item">
+                                    <img src="./assets/images/product-list-img1.png" alt="img-1">  
+                                    <h4 class="product-list-tit">퍼퓸 이브닝글로우</h4>
+                                    <span class="product-list-sub">₩ 149,000</span>  
+                                </div>
+                                <div class="image-item">
+                                    <img src="./assets/images/product-list-img2.png" alt="img-2">  
+                                    <h4 class="product-list-tit" >쉘 퍼퓸 핸드 이브닝글로우</h4>
+                                    <span class="product-list-sub">₩ 18,500</span>
+                                </div>
+                                <div class="image-item">
+                                    <img src="./assets/images/product-list-img3.png" alt="img-3">  
+                                    <h4 class="product-list-tit">에그 립밤 로즈우디 글로우</h4>
+                                    <span class="product-list-sub">₩ 28,900</span>
+                                </div>
+                                <div class="image-item">
+                                    <img src="./assets/images/product-list-img4.png" alt="img-4">  
+                                    <h4 class="product-list-tit">퍼퓸 밤 이브닝글로우</h4>
+                                    <span class="product-list-sub">₩ 46,500</span>
+                                </div>
+                                <div class="image-item">
+                                    <img src="./assets/images/product-list-img5.png" alt="img-5">  
+                                    <h4 class="product-list-tit">퍼퓸 이브닝글로우</h4>
+                                    <span class="product-list-sub">₩ 42,000</span> 
+                                </div>
+                            </div>
+                            <button id="next-slide" class="slide-button rounded">&gt;</button>
+                        </div>
+                        <div class="slider-scrollbar">
+                            <div class="scrollbar-track">
+                                <div class="scrollbar-thumb"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- new-wrap -->
+        </div><!-- .main-new -->
+
+        <!-- main-wear -->
+        <div class="main-wear">
+            <div class="wrap">
+                <div class="main-wear-colgroup">    
+                    <div class="main-wear_bg">
+                        <!-- <img src="./assets/images/main-wear-img.png" alt="main-wear-img"> -->
+                    </div>
+        
+                    <div class="main-wear_content">
+                            <h3 class="main-wear_content-title">EVENING GLOW<br>WEAR COLLECTION</h3>
+                            <p class="main-wear_content-desc">탬버린즈 레더 웨어와 함께 일상 속 언제 어디서든 장미의 은은한 향을 느껴보세요.</p>     
+                    </div>
+                </div><!-- .main-wear_colgroup -->
+            </div><!-- .wrap -->
+        </div><!-- .main-wear -->
+    
+        <div class="main-popup">
+            <div class="wrap">
+                <!-- mobile Title -->
+                <h2 class="main-popup-title">
+                    <span class="main-popup-title-item">독창적인 아이디어가 <span class="newline"></span> 돋보이는 <span class="main-popup-title-highlight">공간</span>에서<br></span>
+                    <span class="main-popup-title-item">일상의 <span class="main-popup-title-highlight">경험</span>을 특별하게<span class="newline"></span> 만들어보세요.</span>
+                </h2>
+                <!-- PC Title -->
+                <div class="main-popup-title-PC">
+                    <p class="main-popup-title-item">독창적인</p>
+                    <p>아이디어가 돋보이는 
+                    <span class="main-popup-title-highlight">공간</span>에서
+                    </p>
+                    <p class="main-popup-title-item">일상의 
+                    <span class="main-popup-title-highlight">경험</span>을 특별하게 만들어보세요.</p>
+                </div>
+    
+                <div class="main-popup-slider">
+                    <!-- mobile ver -->
+                    <div class="main-popup-slider-inner">
+                        <div class="main-popup-slider-item">               
+                            <div class="main-popup_first popupBg1-1">
+                                <div class="main-popup_thumb-txt">
+                                    <p class="main-popup_thumb-subtitle">일상의 여정에 감각적인 경험
+                                    </p>
+                                    <h4 class="main-popup_thumb-title">카 디퓨저</h4>
+                                    <a class="open-btn" href="#"></a>
+                                </div><!-- .main-popup_thumb-txt -->
+                            </div><!-- .main-popup_first -->    
+                            <div class="main-popup-last popupBg1-2">
+                                <div class="main-popup_txt">차 안에서 경험하는 다양한 순간들을 더 생동감 있게 느껴보세요.</div>
+                                <a class="close-btn" href="#"></a>
+                            </div><!-- .main-popup_last -->    
+                        </div><!-- .main-popup_slider-item -->
+
+                        <div class="main-popup-slider-item">               
+                            <div class="main-popup_first popupBg2-1">
+                                <div class="main-popup_thumb-txt">
+                                    <p class="main-popup_thumb-subtitle">방해 받고 싶지 않은 순간
+                                    </p>
+                                    <h4 class="main-popup_thumb-title">토일렛 프래그런스</h4>
+                                    <a class="open-btn" href="#"></a>
+                                </div><!-- .main-popup_thumb-txt -->
+                            </div><!-- .main-popup_first -->    
+                            <div class="main-popup-last popupBg2-2">
+                                <div class="main-popup_txt">은밀하고 원초적인 공간에서 좋은 향과 함께 영감을 얻어보세요.</div>
+                                <a class="close-btn" href="#"></a>
+                            </div><!-- .main-popup_last -->    
+                            <a class="main-popup_pop-btn" href="#"></a>
+                        </div><!-- .main-popup_slider-item -->
+
+                        <div class="main-popup-slider-item">               
+                            <div class="main-popup_first popupBg3-1">
+                                <div class="main-popup_thumb-txt">
+                                    <p class="main-popup_thumb-subtitle">작물을 수확할 때의 기쁨
+                                    </p>
+                                    <h4 class="main-popup_thumb-title">하베스트 퍼퓸 비누</h4>
+                                    <a class="open-btn" href="#"></a>
+                                </div><!-- .main-popup_thumb-txt -->
+                            </div><!-- .main-popup_first -->    
+                            <div class="main-popup-last popupBg3-2">
+                                <div class="main-popup_txt">작물의 수확에서 오는 기쁨과 건강함을 온전히 즐겨보세요.</div>
+                                <a class="close-btn" href="#"></a>
+                            </div><!-- .main-popup_last -->    
+                            <a class="main-popup_pop-btn" href="#"></a>
+                        </div><!-- .main-popup_slider-item -->
+                        <div class="main-popup-slider-item">               
+                            <div class="main-popup_first popupBg4-1">
+                                <div class="main-popup_thumb-txt">
+                                    <p class="main-popup_thumb-subtitle">확장된 퍼퓸의 페르소나
+                                    </p>
+                                    <h4 class="main-popup_thumb-title">퍼퓸 밤</h4>
+                                    <a class="open-btn" href="#"></a>
+                                </div><!-- .main-popup_thumb-txt -->
+                            </div><!-- .main-popup_first -->    
+                            <div class="main-popup-last popupBg4-2">
+                                <div class="main-popup_txt">어디서든 자유롭게 향을 경험하고 스스로를 표현해보세요.</div>
+                                <a class="close-btn" href="#"></a>
+                            </div><!-- .main-popup_last -->    
+                            <a class="main-popup_pop-btn" href="#"></a>
+                        </div><!-- .main-popup_slider-item -->
+                    </div>
+
+                    <!-- PC ver -->
+                    <div class="main-popup-slider-inner-PC">
+                        <div class="main-popup-slider-item item1 active">
+                            <ul class="main-popup-slider-index-first popupBg1-1">
+                                <li class="item1-1">
+                                    <p class="main-popup-slider-index-subtitle">일상의 여정에 감각적인 경험</p>
+                                    <h4 class="main-popup-slider-index-title">카 디퓨저 &nbsp;<span class="circle"></span></h4>
+                                </li>
+                                <li class="item2-1">
+                                    <p class="main-popup-slider-index-subtitle">방해받고 싶지 않은 순간</p>
+                                    <h4 class="main-popup-slider-index-title">토일렛 프래그런스</h4>
+                                </li>
+                                <li class="item3-1">
+                                    <p class="main-popup-slider-index-subtitle">작물을 수확할 때의 기쁨</p>
+                                    <h4 class="main-popup-slider-index-title">하베스트 퍼퓸 비누</h4>
+                                </li>
+                                <li class="box4">
+                                    <p class="main-popup-slider-index-subtitle">확장된 퍼퓸의 페르소나</p>
+                                    <h4 class="main-popup-slider-index-title">퍼퓸 밤</h4>
+                                </li>
+                            </ul>
+                            <ul class="main-popup-slider-index-last popupBg1-2">
+                                <li class="main-popup-slider-index-last-item">
+                                    <p class="main-popup-slider-index-txt">차 안에서 경험하는 다양한 순간들을 더 생동감 있게 느껴보세요.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-popup-slider-item item2">
+                            <ul class="main-popup-slider-index-first popupBg2-1">
+                                <li class="item1-1">
+                                    <p class="main-popup-slider-index-subtitle">일상의 여정에 감각적인 경험</p>
+                                    <h4 class="main-popup-slider-index-title">카 디퓨저</h4>
+                                </li>
+                                <li class="item2-1">
+                                    <p class="main-popup-slider-index-subtitle">방해받고 싶지 않은 순간</p>
+                                    <h4 class="main-popup-slider-index-title">토일렛 프래그런스 &nbsp;<span class="circle"></span></h4>
+                                </li>
+                                <li class="item3-1">
+                                    <p class="main-popup-slider-index-subtitle">작물을 수확할 때의 기쁨</p>
+                                    <h4 class="main-popup-slider-index-title">하베스트 퍼퓸 비누</h4>
+                                </li>
+                                <li class="item4-1">
+                                    <p class="main-popup-slider-index-subtitle">확장된 퍼퓸의 페르소나</p>
+                                    <h4 class="main-popup-slider-index-title">퍼퓸 밤</h4>
+                                </li>
+                            </ul>
+                            <ul class="main-popup-slider-index-last popupBg2-2">
+                                <li class="main-popup-slider-index-last-item">
+                                    <p class="main-popup-slider-index-txt">은밀하고 원초적인 공간에서 좋은 향과 함께 영감을 얻어보세요.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-popup-slider-item item3">
+                            <ul class="main-popup-slider-index-first popupBg3-1">
+                                <li class="item1-1">
+                                    <p class="main-popup-slider-index-subtitle">일상의 여정에 감각적인 경험</p>
+                                    <h4 class="main-popup-slider-index-title">카 디퓨저</h4>
+                                </li>
+                                <li class="item2-1">
+                                    <p class="main-popup-slider-index-subtitle">방해받고 싶지 않은 순간</p>
+                                    <h4 class="main-popup-slider-index-title">토일렛 프래그런스</h4>
+                                </li>
+                                <li class="item3-1">
+                                    <p class="main-popup-slider-index-subtitle">작물을 수확할 때의 기쁨</p>
+                                    <h4 class="main-popup-slider-index-title">하베스트 퍼퓸 비누 &nbsp;<span class="circle"></span></h4>
+                                </li>
+                                <li class="item4-1">
+                                    <p class="main-popup-slider-index-subtitle">확장된 퍼퓸의 페르소나</p>
+                                    <h4 class="main-popup-slider-index-title">퍼퓸 밤</h4>
+                                </li>
+                            </ul>
+                            <ul class="main-popup-slider-index-last popupBg3-2">
+                                <li class="main-popup-slider-index-last-item">
+                                    <p class="main-popup-slider-index-txt">작물의 수확에서 오는 기쁨과 건강함을 온전히 즐겨보세요. </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-popup-slider-item item4">
+                            <ul class="main-popup-slider-index-first popupBg4-1">
+                                <li class="item1-1">
+                                    <p class="main-popup-slider-index-subtitle">일상의 여정에 감각적인 경험</p>
+                                    <h4 class="main-popup-slider-index-title">카 디퓨저</h4>
+                                </li>
+                                <li class="item2-1">
+                                    <p class="main-popup-slider-index-subtitle">방해받고 싶지 않은 순간</p>
+                                    <h4 class="main-popup-slider-index-title">토일렛 프래그런스</h4>
+                                </li>
+                                <li class="item3-1">
+                                    <p class="main-popup-slider-index-subtitle">작물을 수확할 때의 기쁨</p>
+                                    <h4 class="main-popup-slider-index-title">하베스트 퍼퓸 비누</h4>
+                                </li>
+                                <li class="item4-1">
+                                    <p class="main-popup-slider-index-subtitle">확장된 퍼퓸의 페르소나</p>
+                                    <h4 class="main-popup-slider-index-title">퍼퓸 밤 &nbsp;<span class="circle"></span></h4>
+                                </li>
+                            </ul>
+                            <ul class="main-popup-slider-index-last popupBg4-2">
+                                <li class="main-popup-slider-index-last-item">
+                                    <p class="main-popup-slider-index-txt">어디서든 자유롭게 향을 경험하고 스스로를 표현해보세요.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- main-popup-slider-inner-PC -->
+                </div>
+    
+                <div class="main-popup_btn-wrap">
+                    <a class="btn" href="#">
+                        (&nbsp;&nbsp; 더 많은 컬렉션을 만나보세요&nbsp;&nbsp; )
+                    </a>
+                </div><!-- .main-popup_btn-wrap -->
+            </div> <!-- wrap -->
+        </div> <!-- .main-popup -->
+    
+        <div class="main-news">
+            <div class="wrap">
+                <div class="main-news_bg">
+                    <div class="main-news_banner-content">
+                        <h2 class="main-news_banner-title">HAUS DOSAN:<span class="newline"></span> Future Retail</h2>
+                        <h4 class="main-news_banner-desc">압도적 스케일의 판타지 구현, 브랜드의 세계관을 연결한 퓨처 리테일을 꿈꾸다.</h4>
+                        <a class="btn" href="#">
+                            (&nbsp;&nbsp; Learn More&nbsp;&nbsp; )
+                        </a>
+                    </div><!-- .main-news_banner-content -->
+                </div>
+            </div><!-- .wrap -->
+        </div><!-- .main-news -->
+    
+        <div class="main-slogan">
+            <div class="marquee">
+                <div class="marquee-inner">
+                    Awaken Your Senses. Awaken Your Senses.&nbsp;Awaken Your Senses. Awaken Your Senses.&nbsp;Awaken Your Senses. Awaken Your Senses.&nbsp;Awaken Your Senses. Awaken Your Senses.&nbsp;
+                    Awaken Your Senses. Awaken Your Senses.&nbsp;Awaken Your Senses. Awaken Your Senses.
+                </div>
+            </div><!-- marquee -->
+        </div>
+
+
+        <div class="main-store">
+            <div class="main-store_wrap">
+                <div class="main-store_banner storeBg1">
+                    <h2 class="main-store_banner-title">Step into <span class="newline"></span>(&nbsp;&nbsp; Art&nbsp;&nbsp; ) </h2>
+                    <h4 class="main-store_banner-desc">탬버린즈! 그 Inspiration의 시작</h4>
+                </div>
+                <div class="main-store_banner storeBg2">
+                    <h2 class="main-store_banner-title">Step into <span class="newline"></span>(&nbsp;&nbsp; Oriental&nbsp;&nbsp; ) </h2>
+                    <h4 class="main-store_banner-desc">플래그십 스토어 한남  Hannam</h4>
+                </div>
+                <div class="main-store_banner storeBg3">
+                    <h2 class="main-store_banner-title">Step into <span class="newline"></span>(&nbsp;&nbsp; Garden&nbsp;&nbsp; ) </h2>
+                    <h4 class="main-store_banner-desc">플래그십 스토어 성수  Seongsu</h4>
+                </div>
+                <div class="main-store_banner storeBg4">
+                    <h2 class="main-store_banner-title">Step into <span class="newline"></span>(&nbsp;&nbsp; Crafts&nbsp;&nbsp; ) </h2>
+                    <h4 class="main-store_banner-desc">플래그십 스토어 삼청  Samchung</h4>
+                </div>
+                <div class="main-store_banner storeBg5">
+                    <h2 class="main-store_banner-title">Step into <span class="newline"></span>(&nbsp;&nbsp; Nature&nbsp;&nbsp; ) </h2>
+                    <h4 class="main-store_banner-desc">플래그십 스토어 신사  Sinsa</h4>
+                </div>
+            </div>
+        </div>
+  
+  
+
+        <div class="main-insta">
+            <div class="wrap">
+                <h2 class="main-insta_title">Beauty 
+                    with <br class="smbr">an Artistic Twist</h2>
+                <!-- .main-insta_txt 모바일 버전에서만 보이기!!!!  -->
+                <span class="main-insta_txt">@tamburinsofficial</span>
+    
+                <div class="main-insta_list-wrap">
+                    <!-- .main-insta Mobile  -->
+                    <div class="main-insta_list"> 
+                        <div class="main-insta_list-item">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-01.png" alt="main-insta-01">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+                        <div class="main-insta_list-item ">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-02.png" alt="main-insta-02">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+                        <div class="main-insta_list-item ">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-03.png" alt="main-insta-03">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+                        <div class="main-insta_list-item ">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-04.png" alt="main-insta-04">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+                        <div class="main-insta_list-item ">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-05.png" alt="main-insta-05">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+                        <div class="main-insta_list-item">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-01.png" alt="main-insta-01">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+                        <div class="main-insta_list-item ">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-02.png" alt="main-insta-02">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+                        <div class="main-insta_list-item ">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-03.png" alt="main-insta-03">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+                        <div class="main-insta_list-item ">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-04.png" alt="main-insta-04">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+                        <div class="main-insta_list-item ">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-05.png" alt="main-insta-05">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+                    </div><!-- .main-insta_list -->
+
+                    <!-- .main-insta_list-PC  -->
+                    <div class="main-insta_list-PC"> 
+                        <div class="main-insta_list-item item1">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-01.png" alt="main-insta-01">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+                        <div class="main-insta_list-item item2">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-02.png" alt="main-insta-02">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+
+                        <div class="main-insta_list-item item3">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-03.png" alt="main-insta-03">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+                    
+                        <div class="main-insta__list-item item4">
+                            <a href="#">
+                                <p class="main-insta_list-txt">@tamburinsofficial</p>
+                            </a>
+                        </div>
+                        <div class="main-insta_list-item item5">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-04.png" alt="main-insta-04">
+                            </a>
+                        </div><!-- .main-insta__list-item -->
+
+                        <div class="main-insta_list-item item6">
+                            <a href="#">
+                                <img src="./assets/images/main-insta-05.png" alt="main-insta-05">
+                            </a>
+                        </div><!-- .main-insta__list-item -->           
+                    </div><!-- .main-insta_list -->
+
+                </div><!-- .main-insta_list-wrap -->
+            </div><!-- .wrap -->
+        </div><!-- .main-insta -->
+
+    </main>   
+
+    <!-- footer -->
+    <footer id="footer">
+        <!-- footer-top -->
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-newsletter">
+                    <p class="footer-newsletter-desc">아름다움과 예술이 공존하는 탬버린즈는<br class="onlyPC"> 
+                        감각적인 향과 디자인을 제공합니다. <br class="onlyPC">
+                        특별한 뷰티 경험을 제안하는 브랜드입니다.</p>
+                </div>
+                <!-- .footer__section -->
+                <div class="footer-extend"> <!-- pc버전 ( )만들기!) -->
+                    <div class="footer-menu-container">
+						<ul class="footer-menu-left">
+							<li class="footer-menu-group">
+								<span class="footer-menu-title">매장안내</span>
+								<ul class="footer-menu-list">
+									<li><a href="#">대한민국</a></li>
+									<li><a href="#">일본</a></li>
+									<li><a href="#">중국</a></li>
+									<li><a href="#">전시</a></li>
+								</ul>
+							</li>
+							<li class="footer-menu-group">
+								<span class="footer-menu-title">법적고지</span>
+								<ul class="footer-menu-list">
+									<li><a href="#">공지사항</a></li>
+									<li><a href="#">이용약관</a></li>
+									<li><a href="#"><strong>개인정보처리방침</strong></a></li>
+								</ul>
+							</li>
+						</ul>
+                        <ul class="footer-menu-right">
+							<li class="footer-menu-group">
+								<span class="footer-menu-title">고객서비스</span>
+								<ul class="footer-menu-list">
+									<li><a href="#">비회원 주문 조회</a></li>
+									<li><a href="#">교환 및 반품</a></li>
+									<li><a href="#">자주 묻는 질문</a></li>
+									<li><a href="#">1:1 문의하기</a></li>
+									<li><a href="#">기업 구매 문의</a></li>
+								</ul>
+							</li>
+							<li class="footer-menu-group-sns">
+								<ul class="footer-menu-sns">
+									<li><a class="sns-insta" href="#"></a></li>
+									<li><a class="sns-weibo" href="#"></a></li>
+									<li><a class="sns-facebook" href="#"></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!-- .footer__menu-container -->
+                </div>
+            </div>
+        </div>
+        <!-- footer-logo / M-bot, PC-left -->
+        <p class="footer-copyright">© Tamburins. All rights reserved.</p>
+    </footer>
+
+
+    <!-- swiper -->
+    <!-- <link rel="stylesheet" href="./assets/styles/swiper-bundle.min.css"> -->
+    
+    <script>
+
+    </script>
+
+</body>
+</html>

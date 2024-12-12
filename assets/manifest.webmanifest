@@ -1,0 +1,27 @@
+{
+    "name": "LEEUM",
+    "short_name": "Leeum",
+    "description": "리움미술관 홈페이지 입니다.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+      {
+        "src": "./images/leeum_logo_symbol_white.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "./images/leeum_logo_symbol_white.png",
+        "sizes": "120x120",
+        "type": "image/png"
+      },
+      {
+        "src": "./images/leeum_logo_symbol_white.png",
+        "sizes": "320x320",
+        "type": "image/png"
+      }
+    ]
+  }
+  
