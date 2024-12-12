@@ -53,3 +53,37 @@ header .gnb .header-right li ul li a {
 
 }
 
+/***** main-container *****/
+/***** main-intro *****/
+/***** main-dream *****/
+/***** main-display *****/
+/***** masterpiecess-text *****/
+/***** main-masterpiecess *****/
+/***** main-artists *****/
+/***** main-record *****/
+/***** main-curator *****/
+/***** main-space *****/
+/***** main-notice *****/
+
+
+
+
+/***** footer *****/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: var(--font-size-ms);
+    color: var(--color-gray);
+    padding: 44px 26px 0 26px;
+}
+footer .footer-left h2 {
+    font-size: var(--font-size-ml);
+    font-weight: 600;
+    padding: 6px 0 6px 0;
+}
+footer .footer-left h4 {padding: 6px 0 6px 0;}
+footer .footer-right h4 {padding: 6px 0 6px 0;}
+
+
+
