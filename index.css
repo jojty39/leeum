@@ -58,14 +58,263 @@ header .gnb .header-right li ul li a {
 /***** main-dream *****/
 /***** main-display *****/
 /***** masterpiecess-text *****/
+main .masterpiecess-text {
+    padding: 48px 0 48px 0;
+
+    font-family: var(--font-family-en);
+    font-size: var(--font-size-xxxl);
+    font-weight: 500;
+}
+main .masterpiecess-text .masterpiecess-marquee-top {}
+main .masterpiecess-text .masterpiecess-marquee-bot {}
+
+
 /***** main-masterpiecess *****/
+main .main-masterpiecess {
+    margin: 0px 130px 180px 130px;
+    text-align: center;
+}
+main .main-masterpiecess .masterpiecess-title {}
+main .main-masterpiecess .masterpiecess-title h2 {
+    font-family: var(--font-family-en);
+    font-size: var(--font-size-xxl);
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+main .main-masterpiecess .masterpiecess-title h4 {
+    font-size: var(--font-size-ml);
+    margin-bottom: 80px;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+main .main-masterpiecess .masterpiecess-list {}
+main .main-masterpiecess .masterpiecess-list li {}
+main .main-masterpiecess .masterpiecess-list li img {}
+main .main-masterpiecess .masterpiecess-list li h4 {}
+main .main-masterpiecess .masterpiecess-list li p {}
+
+
+
+
 /***** main-artists *****/
+main .main-artists {
+    margin: 0px 130px 180px 130px;
+    text-align: center;
+    text-transform: none;
+}
+main .main-artists h2 {
+    font-family: var(--font-family-en);
+    font-size: var(--font-size-xxl);
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+main .main-artists h4 {
+    font-size: var(--font-size-ml);
+    margin-bottom: 80px;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+main .main-artists .artists-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px 40px; 
+
+}
+main .main-artists .artists-list li {
+    overflow: hidden;
+}
+main .main-artists .artists-list li a {
+}
+main .main-artists .artists-list li a img {
+
+}
+main .main-artists .artists-list li img:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+
+}
+main .main-artists .artists-list li p {
+    font-size: var(--font-size-ml);
+    margin-top: 20px;
+    text-align: left;
+    
+}
+
+
+
+
+
+
+
 /***** main-record *****/
+main .main-record {
+    margin: 0px 130px 180px 130px;
+    text-align: center;
+}
+main .main-record h2 {
+    font-family: var(--font-family-en);
+    font-size: var(--font-size-xxl);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+main .main-record h4 {
+    font-size: var(--font-size-ml);
+    margin-bottom: 40px;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+main .main-record .record-list {
+    display: flex;
+}
+main .main-record .record-list li:first-child {
+    margin-right: 24px;
+}
+main .main-record .record-list li img {}
+main .main-record .record-list li p {
+    font-size: var(--font-size-l);
+    font-size: 1.75rem; /*28px*/
+    font-weight: 500; 
+    margin: 50px 0 24px 0; 
+}
+main .main-record .record-list li .record-btn a {
+    border: 1px solid var(--color-dark2);
+     background-color: var(--color-dark2);
+    border-radius: 30px;
+    padding: 10px 20px;
+
+}
+
+
+
+
+
+
+/***** curator-text *****/
+main .curator-text {
+    padding: 48px 0 48px 0;
+}
+main .curator-text .curator-marquee {
+    font-family: var(--font-family-en);
+    font-size: var(--font-size-xxxl);
+    font-weight: 500;
+}
+
 /***** main-curator *****/
+main .main-curator {
+    margin: 28px 140px 180px 140px;
+}
+main .main-curator .curator-did {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 120px;
+}
+main .main-curator .curator-did img { 
+    width: 50%;
+}
+main .main-curator .curator-did .curator-text {
+    padding: 0 60px 0 60px;
+}
+main .main-curator .curator-did .curator-text h2 {
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+main .main-curator .curator-did .curator-text p {
+    font-size: var(--font-size-ml);
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+main .main-curator .curator-guide {
+    display: flex;
+
+}
+main .main-curator .curator-guide .guide-text {
+    width: 50%;
+    padding: 0 60px 0 60px;
+}
+main .main-curator .curator-guide .guide-text h2 {
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+main .main-curator .curator-guide .guide-text p {
+    font-size: var(--font-size-ml);
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+main .main-curator .curator-guide .guide-yotube {}
+
+
+
+
+
 /***** main-space *****/
+main .main-space {
+    margin: 0 140px 180px 140px;
+}
+main .main-space h2 {
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    margin-bottom: 48px;
+}
+main .main-space ul {}
+main .main-space ul li {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+main .main-space ul li img {
+    width: 80%;
+}
+main .main-space ul li .main-space-text {
+    width: 20%;
+    padding: 10px 20px 10px 20px;
+}
+main .main-space ul li .main-space-text p {
+    font-size: var(--font-size-m);
+    color: var(--color-gray);
+}
+main .main-space ul li .main-space-text h4 {
+    font-size: var(--font-size-l);
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+
 /***** main-notice *****/
+main .main-notice {
+    margin: 0 140px 180px 140px;
+}
+main .main-notice h2 {
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    margin-bottom: 48px;
+}
+main .main-notice ul {
 
-
+}
+main .main-notice ul li {
+    border-bottom: 1px solid var(--color-dark2);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 1.6;
+    
+}
+main .main-notice ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+main .main-notice ul li a p{
+}
+main .main-notice ul li a span{ 
+    text-align: left;
+    width: 100px;
+}
 
 
 /***** footer *****/
@@ -76,6 +325,7 @@ footer {
     font-size: var(--font-size-ms);
     color: var(--color-gray);
     padding: 44px 26px 0 26px;
+    margin-bottom: 60px;
 }
 footer .footer-left h2 {
     font-size: var(--font-size-ml);
