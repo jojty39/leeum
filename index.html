@@ -9,7 +9,7 @@
 <meta property="og:title" content="Leeum Museum of Art - 리움미술관">
 <meta property="og:url" content="https://jojty39.github.io/leeum/">
 <!-- <meta property="og:image" content="https://jojty39.github.io/portfolio/images/logoDark.png"> -->
-<meta property="og:image" content="https://jojty39.github.io/Leeum/assets/images/leeum_logo_black.png">
+<meta property="og:image" content="https://jojty39.github.io/leeum/assets/images/leeum_logo_black.png">
 <meta property="og:description" content="리움미술관 홈페이지입니다.">
 <meta property="og:type" content="website">
 
@@ -29,11 +29,15 @@
 <link rel="stylesheet" href="./index.css">
 
 <script src="./assets/scripts/jquery-3.7.1.min.js"></script>
-<!-- <script src="./assets/scripts/swiper-bundle.min.js"></script> -->
+<script src="./assets/scripts/gsap.min.js"></script>
+<script src="./assets/scripts/ScrollTrigger.min.js"></script>
 <script defer src="./index.js"></script>
 </head>
 
 <body>
+
+    <div class="cursor"></div>
+    <div class="cursor-inner"></div>
 
     <!-- header gnb-->
     <header id="header">
@@ -102,23 +106,141 @@
     <div class="intro-sub">
         <h4>2024 아트스펙트럼<br>《드림 스크린》</h4>
         <p>국내 신진작가 지원 전시로 명맥을 이어온 ‘아트스펙트럼’은 급격하게 변화하는 동시대 미술 현장의 흐름에 걸맞은 전환을 꾀합니다. 스크린을 통한 경험을 중심으로 젊은 세대의 새로운 감각과 서사를 탐구하며, 윈체스터 하우스를 모티프로 한 미로 같은 공간에서 60점의 작품을 선보입니다. 스크린이 매개하는 공포, 관계, 삶의 조건 등을 현대적 시각으로 재해석하는 전시입니다. 작가들의 이야기와 작품에 담긴 의도를 직접 만나보세요!</p>
-
     </div>
 
    </div>
-  <!-- main-dream -->
-  <div class="main-dream"></div>
-  <!-- main-display -->
-  <div class="main-display"></div>
-  <!-- masterpiecess-text / marquee -->
-  <div class="masterpiecess-text">
-    <div class="masterpiecess-marquee-top">
-        Preserving Tradition  &nbsp;&nbsp; Preserving Tradition 
-      </div>
-      <div class="masterpiecess-marquee-bot">
-        Embracing Modernity &nbsp;&nbsp; Embracing Modernity
-      </div>
+  
+   <!-- main-dream -->
+  <div class="main-dream">
+    <ul class="dream-list">
+        <li>
+            <a href="#">
+                <h2>Arlette Quynh-Anh Tran</h2>
+                <img src="./assets/images/main-intro-list01.png" alt="Arlette Quynh-Anh Tran">
+            </a>
+            <div class="dream-youtube">
+                <iframe 
+                    src="https://www.youtube.com/embed/lRWwaxpBi2I?autoplay=1&mute=1&rel=0&playsinline=1&vq=hd1080&loop=1&playlist=lRWwaxpBi2I" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </li>
+        <li>
+            <a href="#">
+                <img src="./assets/images/main-intro-list02.png" alt="Bo Wang">
+                <h2>Bo Wang</h2>
+            </a>
+            <div class="dream-youtube">   
+                <iframe 
+                    src="https://www.youtube.com/embed/XfUYDOX0vcM?autoplay=1&mute=1&rel=0&playsinline=1&vq=hd1080&loop=1&playlist=XfUYDOX0vcM" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>                                
+            </div>
+        </li>
+        <li>
+            <a href="#">
+                <h2>Li Yi-Fan</h2>
+                <img src="./assets/images/main-intro-list03.png" alt="Li Yi-Fan">
+            </a>
+            <div class="dream-youtube">
+                <iframe 
+                    src="https://www.youtube.com/embed/M23Ye2_36og?autoplay=1&mute=1&rel=0&playsinline=1&vq=hd1080&loop=1&playlist=M23Ye2_36og" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </li>
+        <li>
+            <a href="#">
+                <img src="./assets/images/main-intro-list04.png" alt="Yun Choi">
+                <h2>Yun Choi</h2>
+            </a>
+            <div class="dream-youtube">
+                <iframe 
+                    src="https://www.youtube.com/embed/4HzuvkKd3Ok?autoplay=1&mute=1&rel=0&playsinline=1&vq=hd1080&loop=1&playlist=4HzuvkKd3Ok" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </li>
+        <li>
+            <a href="#">
+                <h2>Kornkarn Rungsawang</h2>
+                <img src="./assets/images/main-intro-list05.png" alt="Kornkarn Rungsawang">
+            </a>
+            <div class="dream-youtube">
+                <iframe 
+                    src="https://www.youtube.com/embed/yuChwqQ0rww?autoplay=1&mute=1&rel=0&playsinline=1&vq=hd1080&loop=1&playlist=yuChwqQ0rww" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </li>
+    </ul>
   </div>
+
+  <!-- main-display -->
+  <div class="main-display">
+    <ul class="display-list">
+        <li class="display-title">
+            <h3>전시</h3>
+            <p>리움미술관은 전통과 현대가 공존하는 특별한 예술의 장입니다. 현재 전시 중인 작품들은 다양한 주제와 매체를 통해 우리의 삶, 상상력, 사회를 새롭게 조명합니다. 예술이 만들어내는 깊은 울림과 다채로운 이야기를 직접 만나고, 한층 더 풍부해진 전시 콘텐츠를 감상해보세요.</p>
+        </li>
+        <li>
+            <img src="./assets/images/main-display01.png" alt="아니카 이">
+            <h4>아니카 이 《또 다른 진화가 있다, 그러나 이에는》</h4>
+            <p>M2<br>2024.09.05. ~ 2024.12.29.</p>
+        </li>
+        <li>
+            <img src="./assets/images/main-display02.png" alt="아니카 이">
+            <h4>전∙함: 깨달음을 담다</h4>
+            <p>M1. 2층<br>2024.09.05. ~ 2025.02.23.</p>
+        </li>
+        <li>
+            <img src="./assets/images/main-display03.png" alt="아니카 이">
+            <h4>폴린 부드리/레나테 로렌츠: 초상</h4>
+            <p>로비<br>2024.07.18. ~ 2024.12.29.</p>
+        </li>
+
+    </ul>
+    
+
+  </div>
+
+  <!-- masterpiecess-marquee / marquee -->
+    <div class="masterpiecess-marquee-top">
+        <div class="masterpiecess-marquee-top-text">
+            Preserving Tradition &nbsp;&nbsp; Preserving Tradition &nbsp;&nbsp; Preserving Tradition 
+        </div>
+        <div class="masterpiecess-marquee-top-text">
+            Preserving Tradition &nbsp;&nbsp; Preserving Tradition &nbsp;&nbsp; Preserving Tradition 
+        </div>
+    </div>
+    <div class="masterpiecess-marquee-bot">
+        <div class="masterpiecess-marquee-bot-text">
+            Embracing Modernity &nbsp;&nbsp; Embracing Modernity&nbsp;&nbsp; Embracing Modernity
+        </div>
+        <div class="masterpiecess-marquee-bot-text">
+            Embracing Modernity &nbsp;&nbsp; Embracing Modernity&nbsp;&nbsp; Embracing Modernity
+        </div>
+    </div>
 
   <!-- main-masterpiecess -->
   <div class="main-masterpiecess">
@@ -126,51 +248,54 @@
         <h2>Timeless Masterpieces</h2>
         <h4>리움미술관은 전통과 현대를 아우르며 예술의 정수를 소장하고 있습니다.<br>시대를 초월한 걸작들을 만나보세요.</h4>
     </div>
-    <ul class="masterpiecess-list">
+
+
+    <ul class="masterpiecess-list-top">
         <li>
-            <img src="./assets/images/main-masterpieces01.png" alt="금동대탑">
+            <img src="./assets/images/main-masterpieces08.png" alt="8번 금관">
+            <h4>금관 및 부속금구</h4>
+            <p>기야, 5-6세기</p>
+        </li>
+        <li>
+            <img src="./assets/images/main-masterpieces01.png" alt="1번 금동대탑">
             <h4>금동대탑</h4>
             <p>금속유물</p>
         </li>
         <li>
-            <img src="./assets/images/main-masterpieces02.png" alt="정물">
+            <img src="./assets/images/main-masterpieces02.png" alt="2번 정물">
             <h4>정물</h4>
-            <p>구본웅웅</p>
+            <p>구본웅</p>
         </li>
-        <li>
-            <img src="./assets/images/main-masterpieces03.png" alt="공간 안의 선 구성">
-            <h4>공간 안의 선 구성 No.2</h4>
-            <p>나움 가보보</p>
-        </li>
-        <li>
-            <img src="./assets/images/main-masterpieces04.png" alt="비비디">
-            <h4>비비디</h4>
-            <p>권오상상</p>
-        </li>
-        <li>
-            <img src="./assets/images/main-masterpieces05.png" alt="사막 샘플">
-            <h4>사막 샘플</h4>
-            <p>가브리엘 오로즈코코</p>
-        </li>
-        <li>
-            <img src="./assets/images/main-masterpieces06.png" alt="심바이오플롯">
-            <h4>심바이오플롯:함께 사는 터</h4>
-            <p>염지혜혜</p>
-        </li>
-        <li>
-            <img src="./assets/images/main-masterpieces07.png" alt="청동은입사">
-            <h4>청동은입사 운룡문 향완</h4>
-            <p>고려, 1229(1289)년년</p>
-        </li>
-        <li>
-            <img src="./assets/images/main-masterpieces08.png" alt="금관">
-            <h4>금관 및 부속금구</h4>
-            <p>기야, 5-6세기</p>
-        </li>
-
-
     </ul>
-
+    <ul class="masterpiecess-list-center">
+        <li>
+            <img src="./assets/images/main-masterpieces07.png" alt="7번 청동은입사">
+            <h4>청동은입사 운룡문 향완</h4>
+            <p>고려, 1229(1289)년</p>
+        </li>
+        <li>
+            <img src="./assets/images/main-masterpieces03.png" alt="3번 공간 안의 선 구성">
+            <h4>공간 안의 선 구성 No.2</h4>
+            <p>나움 가보</p>
+        </li>
+    </ul>
+    <ul class="masterpiecess-list-bot">
+        <li>
+            <img src="./assets/images/main-masterpieces06.png" alt="6번 심바이오플롯">
+            <h4>심바이오플롯:함께 사는 터</h4>
+            <p>염지혜</p>
+        </li>
+        <li>
+            <img src="./assets/images/main-masterpieces05.png" alt="5번 사막 샘플">
+            <h4>사막 샘플</h4>
+            <p>가브리엘 오로즈코</p>
+        </li>
+        <li>
+            <img src="./assets/images/main-masterpieces04.png" alt="4번 비비디">
+            <h4>비비디</h4>
+            <p>권오상</p>
+        </li>
+    </ul>
   </div>
 
     <!-- main-artists -->
@@ -250,11 +375,13 @@
   </div>
 
   <!-- curator-text / marquee -->
-  <div class="curator-text">
-    <div class="curator-marquee">
-        Digital Art Curator &nbsp;&nbsp; Digital Art Curator
-      </div>
-
+  <div class="curator-marquee">
+    <div class="curator-marquee-text">
+        Digital Art Curator &nbsp;&nbsp; Digital Art Curator &nbsp;&nbsp; Digital Art Curator
+    </div>
+    <div class="curator-marquee-text">
+        Digital Art Curator &nbsp;&nbsp; Digital Art Curator &nbsp;&nbsp; Digital Art Curator
+    </div>
   </div>
 
   <!-- main-curator -->
@@ -273,7 +400,15 @@
             <p>갤럭시 S21 Plus 기반의 3세대 디지털 가이드를 통해 리움의 작품들을 더욱 깊이 경험하세요. 똑똑하고 친절한 디지털 도슨트와 함께 작품 감상은 물론, 다양한 미술관 투어 프로그램도 즐길 수 있습니다. 관람 후 End-Ticket도 잊지 마세요!</p>
         </div>
         <div class="guide-yotube">
-            <img src="./assets/images/main-curator02.png" alt="guide-yotube">
+            <!-- vq=hd1080: 동영상을 1080p 고화질로 설정-->
+            <iframe 
+            src="https://www.youtube.com/embed/jDxuHhUghAQ?autoplay=1&mute=1&loop=1&rel=0&playsinline=1&vq=hd1080&playlist=jDxuHhUghAQ" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen 
+            referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
         </div>
     </div>
   </div>
@@ -372,12 +507,6 @@
     </footer>
 
 
-    <!-- swiper -->
-    <!-- <link rel="stylesheet" href="./assets/styles/swiper-bundle.min.css"> -->
-    
-    <script>
-
-    </script>
 
 </body>
 </html>

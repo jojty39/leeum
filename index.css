@@ -3,16 +3,68 @@
 body {
     background-color: var(--color-dark1);
     color: var(--color-white1);
+    cursor: none;
+
+}
+
+.cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    z-index: 9999;
+    border-radius: 50%;
+    /* background: rgba(255, 255, 255, 0.8); */
+    background: var(--color-white1);
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.2s;
+}
+.cursor.active {
+    transform: scale(1.5);
+    background: rgba(255, 255, 255, 0.8);
+    background: var(--color-white1);
+}
+.cursor-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px; 
+    height: 12px;
+    background: var(--color-dark1);
+    border: 1px solid var(--color-white1);
+    border-radius: 50%;
+    pointer-events: none;
+    user-select: none;
+}
+.cursor-inner.active {
+    transform: scale(0.8);
+}
+
+.cursor.hidden,
+.cursor-inner.hidden {
+    opacity: 0; /* 투명하게 숨김 */
+    visibility: hidden; /* 보이지 않게 설정 */
+    transition: opacity 0.2s ease-in-out; /* 부드럽게 숨김 */
 }
 
 /***** header *****/
-header {}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    transition: transform 0.3s ease-in-out;
+}
 header .gnb {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 40px 0 40px;
-    border-bottom: 1px solid var(--color-white2);
+    border-bottom: 1px solid var(--color-dark2);
+    background-color: var(--color-dark1);
 }
 header .gnb .header-left {}
 header .gnb .header-left a {
@@ -53,28 +105,225 @@ header .gnb .header-right li ul li a {
 
 }
 
-/***** main-container *****/
+/***** main *****/
+main {
+    overflow: hidden;
+}
 /***** main-intro *****/
-/***** main-dream *****/
-/***** main-display *****/
-/***** masterpiecess-text *****/
-main .masterpiecess-text {
-    padding: 48px 0 48px 0;
+main .main-intro {
+    margin: 0px 0px 100px 0px;
+}
+main .main-intro h1 {
+    font-family: 'Griffy', Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: var(--font-size-xxxxl);
+    padding: 50px 80px 0 80px;
 
+}
+main .main-intro .intro-tit {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+main .main-intro .intro-tit h4 {
+    font-weight: 400;
+    font-size: var(--font-size-lm);
+    padding: 50px 80px 50px 80px;
+}
+main .main-intro .intro-tit h1 {
+    font-family: 'Griffy', Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: var(--font-size-xxxxl);
+    text-align: right;
+    padding: 50px 80px 10px 80px;
+    line-height: 1.1;
+}
+main .main-intro img {}
+main .main-intro .intro-sub {
+    font-weight: 400;
+    font-size: var(--font-size-lm);
+    display: flex;
+    padding: 80px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+main .main-intro .intro-sub h4 {width: 50%;}
+main .main-intro .intro-sub p {width: 50%;}
+
+/***** main-dream *****/
+main .main-dream {
+    margin: 0px 80px 120px 80px;
+}
+main .main-dream .dream-list {
+    position: relative; 
+}
+main .main-dream .dream-list li {}
+main .main-dream .dream-list li a {
+    display: flex;
+    margin-bottom: 32px;
+}
+main .main-dream .dream-list li a:hover h2 {
+    border-bottom: 1px solid var(--color-white1);
+}
+main .main-dream .dream-list li a h2 {
+    font-family: 'Griffy', Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: var(--font-size-xxxl);
+    height: 163px; line-height: 163px;
+}
+main .main-dream .dream-list li a img {
+    width: 214px; height: 120px;
+    width: 289px; height: 163px;
+    /* padding: 0 24px 0 24px; */
+    margin: 0 30px 0 30px;
+}
+main .main-dream .dream-list li a .dream-yotube {
+
+    margin: 0 auto; /* 가운데 정렬 */
+
+
+}
+main .main-dream .dream-list li .dream-youtube iframe  {
+
+    width: 589px;
+    height: 361px;
+    height: auto;
+    aspect-ratio: 16/9; 
+    /* border: none; */
+    display: none;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+
+    position: absolute;
+    /* top: 0; */
+    /* right: 50%;  */
+    bottom: 30%;
+    left: 50%;
+
+
+}
+
+.dream-list li a:hover + .dream-youtube iframe {
+    display: block; /* hover 시 동영상 표시 */
+    opacity: 1; /* 동영상 투명도 활성화 */
+}
+
+
+
+/***** main-display *****/
+main .main-display {
+    overflow: hidden;
+    background-color: var(--color-white1);
+    color: var(--color-dark1);
+    line-height: 1.6;
+    letter-spacing: 1px;
+    padding: 110px 100px 100px 110px;
+    cursor: url('./assets/images/main-display-free-icon-eye.png'), auto; /* 사용자 지정 커서 설정 */
+
+}
+main .main-display .display-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+main .main-display .display-list .display-title {
+
+}
+main .main-display .display-list .display-title h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-bottom: 48px;
+}
+main .main-display .display-list .display-title p {
+    font-size: var(--font-size-l);
+    font-weight: 450;
+    width: 80%;
+    line-height: 1.7;
+
+}
+main .main-display .display-list li {
+    flex: 0 0 auto; /* 가로로 정렬된 요소가 줄바꿈되지 않도록 설정 */
+    width: 300px; /* 각 카드의 고정 너비 */
+    width: 853px;
+
+
+}
+main .main-display .display-list li img {
+    width: 853px; height: 480px;
+}
+main .main-display .display-list li img:hover {}
+main .main-display .display-list li h4 {
+    font-size: var(--font-size-ml);
+    font-weight: 600;
+    text-align: center;
+    margin: 30px 0 16px 0;
+
+}
+main .main-display .display-list li p {
+    font-weight: 400;
+}
+main .main-display .display-list li:last-child {
+    /* background-color: darkblue; */
+    /* padding-right: 100px !important; */
+}
+
+
+/***** masterpiecess-marquee *****/
+main .masterpiecess-marquee-top {
+    padding: 100px 0 0 0;
+    position: relative;
+    overflow: hidden; 
+    white-space: nowrap; /* 텍스트를 한 줄로 유지 */
+    display: flex; /* 텍스트를 가로로 배치 */
+}
+main .masterpiecess-marquee-top .masterpiecess-marquee-top-text {
     font-family: var(--font-family-en);
+    margin-bottom: -10px;
+    display: inline-block;
     font-size: var(--font-size-xxxl);
     font-weight: 500;
+    white-space: nowrap;
+    will-change: transform; /* 성능 최적화 */
+    padding-right: 50px; 
 }
-main .masterpiecess-text .masterpiecess-marquee-top {}
-main .masterpiecess-text .masterpiecess-marquee-bot {}
+main .masterpiecess-marquee-bot {
+    padding: 0 0 200px 0;
+    position: relative;
+    overflow: hidden; 
+    white-space: nowrap; /* 텍스트를 한 줄로 유지 */
+    display: flex; /* 텍스트를 가로로 배치 */
+    /* flex 방향을 역으로 돌려서 무한히 흐르는 글자 해결 */
+    flex-direction: row-reverse;
+}
+main .masterpiecess-marquee-bot .masterpiecess-marquee-bot-text {
+    font-family: var(--font-family-en);
+    display: inline-block;
+    font-size: var(--font-size-xxxl);
+    font-weight: 500;
+    white-space: nowrap;
+    will-change: transform; /* 성능 최적화 */
+    /* padding-right: 50px;  */
+    padding-left: 50px; 
+    /* margin-left: -50px; */
+}
 
 
 /***** main-masterpiecess *****/
 main .main-masterpiecess {
     margin: 0px 130px 180px 130px;
     text-align: center;
+    position: relative;
+    /* width: 100%; */
+    height: 100vh;
 }
-main .main-masterpiecess .masterpiecess-title {}
+main .main-masterpiecess .masterpiecess-title {
+    position: absolute;
+    top: 50%; /* 세로 중앙 정렬 */
+    left: 50%; /* 가로 중앙 정렬 */
+    transform: translate(-50%, -50%); /* 요소 크기를 고려한 중심 이동 */
+
+}
 main .main-masterpiecess .masterpiecess-title h2 {
     font-family: var(--font-family-en);
     font-size: var(--font-size-xxl);
@@ -88,12 +337,62 @@ main .main-masterpiecess .masterpiecess-title h4 {
     line-height: 1.7;
     letter-spacing: 1px;
 }
-main .main-masterpiecess .masterpiecess-list {}
-main .main-masterpiecess .masterpiecess-list li {}
-main .main-masterpiecess .masterpiecess-list li img {}
-main .main-masterpiecess .masterpiecess-list li h4 {}
-main .main-masterpiecess .masterpiecess-list li p {}
 
+main .main-masterpiecess ul {
+    cursor: pointer;
+    display: flex;
+    text-align: left;
+    letter-spacing: 1px;
+}
+main .main-masterpiecess ul h4 {
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    margin: 16px 0 2px 0;
+}
+main .main-masterpiecess ul p {
+    font-size: var(--font-size-ms);
+    font-weight: 300;
+}
+
+main .main-masterpiecess .masterpiecess-list-top {
+    justify-content: space-evenly;
+}
+main .main-masterpiecess .masterpiecess-list-center {
+    justify-content: space-between;
+    padding: 80px 0 80px 0;
+}
+main .main-masterpiecess .masterpiecess-list-top li:nth-child(2) {
+    /* background-color: blueviolet; */
+    padding-bottom: 24px;
+}
+main .main-masterpiecess .masterpiecess-list-bot {
+    justify-content: space-evenly;
+}
+
+main .main-masterpiecess .masterpiecess-list-bot li:nth-child(2) {
+    /* background-color: blueviolet; */
+    padding-top: 24px;
+}
+
+.masterpiecess-list-top,
+.masterpiecess-list-center,
+.masterpiecess-list-bot {
+    transform: scale(0.5); /* 초기 크기 */
+    opacity: 0; /* 초기 투명도 */
+}
+
+/* .main-artists,
+.main-record,
+.main-space,
+.main-notice 
+트리거 적용 (아래에서 위로) */
+.main-artists,
+.main-record,
+.main-space,
+.main-notice {
+    opacity: 0; /* 초기 투명도 */
+    transform: translateY(100px); /* 아래쪽으로 이동된 상태 */
+}
 
 
 
@@ -133,6 +432,7 @@ main .main-artists .artists-list li a img {
 main .main-artists .artists-list li img:hover {
     transform: scale(1.05);
     transition: 0.5s;
+
 
 }
 main .main-artists .artists-list li p {
@@ -192,14 +492,34 @@ main .main-record .record-list li .record-btn a {
 
 
 
-/***** curator-text *****/
-main .curator-text {
+/***** curator-marquee *****/
+main .curator-marquee {
     padding: 48px 0 48px 0;
+    position: relative;
+    overflow: hidden; 
+    white-space: nowrap; /* 텍스트를 한 줄로 유지 */
+    display: flex; /* 텍스트를 가로로 배치 */
+
 }
-main .curator-text .curator-marquee {
+main .curator-marquee .curator-marquee-text {
     font-family: var(--font-family-en);
+    display: inline-block;
     font-size: var(--font-size-xxxl);
     font-weight: 500;
+    white-space: nowrap;
+    will-change: transform; /* 성능 최적화 */
+    padding-right: 50px; 
+  
+}
+
+/* .curator-did,
+.curator-guide
+트리거 적용 각각 양 옆에서 제자리로 */
+.curator-did,
+.curator-guide {
+    opacity: 0; /* 초기 투명 상태 */
+    transform: translateX(0); /* 애니메이션 전에 이동된 상태 */
+    overflow: hidden;
 }
 
 /***** main-curator *****/
@@ -246,6 +566,14 @@ main .main-curator .curator-guide .guide-text p {
     letter-spacing: 1px;
 }
 main .main-curator .curator-guide .guide-yotube {}
+
+main .main-curator .curator-guide .guide-yotube iframe {
+    width: 707px;
+    /* height: 435px; */
+    height: auto;
+    aspect-ratio: 16/9; /* 반응형 비율 유지 */
+    border: none;
+}
 
 
 
@@ -309,7 +637,7 @@ main .main-notice ul li a {
     padding: 10px;
     
 }
-main .main-notice ul li a p{
+main .main-notice ul li a p {
 }
 main .main-notice ul li a span{ 
     text-align: left;
