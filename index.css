@@ -383,19 +383,6 @@ main .main-masterpiecess .masterpiecess-list-bot li:nth-child(2) {
     opacity: 0; /* 초기 투명도 */
 }
 
-/* .main-artists,
-.main-record,
-.main-space,
-.main-notice 
-트리거 적용 (아래에서 위로) */
-.main-artists,
-.main-record,
-.main-space,
-.main-notice {
-    opacity: 0; /* 초기 투명도 */
-    transform: translateY(100px); /* 아래쪽으로 이동된 상태 */
-}
-
 
 
 /***** main-artists *****/
@@ -412,7 +399,7 @@ main .main-artists h2 {
 }
 main .main-artists h4 {
     font-size: var(--font-size-ml);
-    margin-bottom: 80px;
+    margin-bottom: 480px;
     font-weight: 300;
     line-height: 1.7;
     letter-spacing: 1px;
@@ -463,12 +450,12 @@ main .main-record h2 {
 }
 main .main-record h4 {
     font-size: var(--font-size-ml);
-    margin-bottom: 40px;
+    margin-bottom: 480px;
     font-weight: 300;
     line-height: 1.7;
     letter-spacing: 1px;
 }
-main .main-record .record-list {
+main .main-record .record-list{
     display: flex;
 }
 main .main-record .record-list li:first-child {
@@ -512,16 +499,6 @@ main .curator-marquee .curator-marquee-text {
     will-change: transform; /* 성능 최적화 */
     padding-right: 50px; 
   
-}
-
-/* .curator-did,
-.curator-guide
-트리거 적용 각각 양 옆에서 제자리로 */
-.curator-did,
-.curator-guide {
-    opacity: 0; /* 초기 투명 상태 */
-    transform: translateX(0); /* 애니메이션 전에 이동된 상태 */
-    overflow: hidden;
 }
 
 /***** main-curator *****/

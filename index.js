@@ -96,7 +96,6 @@ $(document).on("mousemove", function (e) {
 });
 
 
-// .dream-list a 호버시, .dream-youtube iframe 보여지고 자동재생
 // .dream-list h2 호버 시, .dream-youtube iframe 보여지고 자동재생
 $(document).ready(function () {
     $(".dream-list h2").hover(
@@ -207,67 +206,55 @@ gsap.fromTo(
 );
 
 
-// 섹션들에 애니메이션 설정
-[".main-artists", ".main-record", ".main-space", ".main-notice"].forEach((section) => {
-    gsap.fromTo(
-        section,
-        {
-            y: 100, // 아래에서 시작
-            opacity: 0, // 투명하게 시작
-        },
-        {
-            y: 0, // 제자리로 이동
-            opacity: 1, // 완전히 보이게
-            duration: 2.5, // 애니메이션 지속 시간
-            ease: "power2.out", // 부드러운 애니메이션
-            scrollTrigger: {
-                trigger: section, // 각 섹션을 트리거로 설정
-                start: "top 80%", // 섹션의 상단이 화면의 80% 지점에 도달하면 시작
-                end: "top 50%", // 섹션의 상단이 화면의 50% 지점에 도달하면 종료
-                scrub: true, // 스크롤과 애니메이션 연동
-            },
+// main-artists ul(artists-list) li
+$(function(){
+    gsap.timeline({
+        scrollTrigger:{
+            trigger:'main .main-artists .artists-list',
+            start:'top 80%',
+            end:'20% 100%',
+            scrub:2,
+            // markers:true
         }
-    );
+    })
+    .to('main .main-artists .artists-list li:nth-child(1)',{y:'-400px', duration:1, ease:'none'}, 0.2)
+    .to('main .main-artists .artists-list li:nth-child(2)',{y:'-400px', duration:1, ease:'none'}, 0.4)
+    .to('main .main-artists .artists-list li:nth-child(3)',{y:'-400px', duration:1, ease:'none'}, 0.6)
+    .to('main .main-artists .artists-list li:nth-child(4)',{y:'-400px', duration:1, ease:'none'}, 0.8)
+    .to('main .main-artists .artists-list li:nth-child(5)',{y:'-400px', duration:1, ease:'none'}, 2.2)
+    .to('main .main-artists .artists-list li:nth-child(6)',{y:'-400px', duration:1, ease:'none'}, 2.4)
+    .to('main .main-artists .artists-list li:nth-child(7)',{y:'-400px', duration:1, ease:'none'}, 2.6)
+    .to('main .main-artists .artists-list li:nth-child(8)',{y:'-400px', duration:1, ease:'none'}, 2.8)
 });
 
-// curator-did: 왼쪽에서 오른쪽으로 나타나도록 설정
-gsap.fromTo(
-    ".curator-did",
-    {
-        x: -200, // 왼쪽으로부터 시작
-        opacity: 0, // 투명하게 시작
-    },
-    {
-        x: 0, // 원래 위치로 이동
-        opacity: 1, // 완전히 보이게
-        duration: 1.5, // 애니메이션 지속 시간
-        ease: "power2.out", // 부드러운 애니메이션 효과
-        scrollTrigger: {
-            trigger: ".main-curator", // 트리거 설정
-            start: "top 80%", // 시작 지점
-            end: "top 50%", // 종료 지점
-            scrub: true, // 스크롤 연동
-        },
-    }
-);
+// main .main-record .record-list li
+$(function(){
+    gsap.timeline({
+        scrollTrigger:{
+            trigger:'main .main-record .record-list',
+            start:'top 80%',
+            end:'20% 100%',
+            scrub:2,
+            // markers:true
+        }
+    })
+    .to('main .main-record .record-list li:first-child',{y:'-400px', duration:1, ease:'none'}, 0.2)
+    .to('main .main-record .record-list li:last-child ',{y:'-400px', duration:1, ease:'none'}, 0.4)
 
-// curator-guide: 오른쪽에서 왼쪽으로 나타나도록 설정
-gsap.fromTo(
-    ".curator-guide",
-    {
-        x: 200, // 오른쪽으로부터 시작
-        opacity: 0, // 투명하게 시작
-    },
-    {
-        x: 0, // 원래 위치로 이동
-        opacity: 1, // 완전히 보이게
-        duration: 2.5, // 애니메이션 지속 시간
-        ease: "power2.out", // 부드러운 애니메이션 효과
-        scrollTrigger: {
-            trigger: ".main-curator", // 트리거 설정
-            start: "top 80%", // 시작 지점
-            end: "top 50%", // 종료 지점
-            scrub: true, // 스크롤 연동
-        },
-    }
-);
+});
+
+// main .main-curator .curator-did , .curator-guide 
+$(function(){
+    gsap.timeline({
+        scrollTrigger:{
+            trigger:'main .main-curator',
+            start:'top 90%',
+            end:'20% 100%',
+            scrub:2,
+            markers:true
+        }
+    })
+    .fromTo('main .main-curator .curator-did',{x:'800px', duration:1, ease:'none'},{x:'0'}, 1.4)
+    .fromTo('main .main-curator .curator-guide',{x:'-800px', duration:1, ease:'none'},{x:'0'}, 2.8)
+
+});
