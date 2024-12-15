@@ -36,19 +36,21 @@ $(document).ready(function () {
     let cursorX = 0, cursorY = 0;
     const delay = 0.1;
 
-    // 마우스 움직임 이벤트
-    $(document).on("mousemove", function (e) {
-        mouseX = e.pageX;
-        mouseY = e.pageY;
+// 마우스 움직임 이벤트
+$(document).on("mousemove", function (e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
 
-        // 검정 테두리 즉각 이동
-        $cursor.css({
-            left: mouseX - $cursor.width() / 2 + "px",
-            top: mouseY - $cursor.height() / 2 + "px",
-        });
+    // 검정 테두리 즉각 이동
+    $cursor.css({
+        left: mouseX - $cursor.width() / 2 + "px",
+        top: mouseY - $cursor.height() / 2 + "px",
+    });
 
-        // 마우스 커서가 pointer 상태인지 확인
-        const targetElement = document.elementFromPoint(e.clientX, e.clientY);
+    // 마우스 커서가 pointer 상태인지 확인
+    const targetElement = document.elementFromPoint(e.clientX, e.clientY);
+
+    if (targetElement) { // targetElement가 유효한 경우에만 실행
         const isPointer = window.getComputedStyle(targetElement).cursor === "pointer";
 
         // pointer 상태에 따라 hidden 클래스 추가/제거
@@ -59,7 +61,12 @@ $(document).ready(function () {
             $cursor.removeClass("hidden");
             $cursorInner.removeClass("hidden");
         }
-    });
+    } else {
+        // targetElement가 null인 경우 커서를 기본 상태로 설정
+        $cursor.removeClass("hidden");
+        $cursorInner.removeClass("hidden");
+    }
+});
 
     // 흰색 원 부드럽게 이동
     function updateCursorInner() {
@@ -90,29 +97,37 @@ $(document).ready(function () {
 
 
 // .dream-list a 호버시, .dream-youtube iframe 보여지고 자동재생
-// <a> 요소에 hover 이벤트 추가
-document.querySelectorAll(".dream-list li a").forEach((link) => {
-    link.addEventListener("mouseenter", function () {
-        const youtubeIframe = this.nextElementSibling.querySelector("iframe");
-        const src = youtubeIframe.getAttribute("src");
+// .dream-list h2 호버 시, .dream-youtube iframe 보여지고 자동재생
+$(document).ready(function () {
+    $(".dream-list h2").hover(
+        function () {
+            // hover 시작 시
+            const $iframe = $(this).closest("li").find(".dream-youtube iframe");
+            const src = $iframe.attr("src");
 
-        // hover 시 autoplay 파라미터 추가
-        if (!src.includes("autoplay=1")) {
-            youtubeIframe.setAttribute("src", src + "&autoplay=1");
+            // autoplay=1이 없으면 추가
+            if (!src.includes("autoplay=1")) {
+                $iframe.attr("src", src + "&autoplay=1");
+            }
+
+            // iframe 보이기
+            $iframe.css({
+                display: "block",
+                opacity: 1,
+            });
+        },
+        function () {
+            // hover 종료 시
+            const $iframe = $(this).closest("li").find(".dream-youtube iframe");
+
+            // iframe 숨기기
+            $iframe.css({
+                display: "none",
+                opacity: 0,
+            });
         }
-    });
-
-    link.addEventListener("mouseleave", function () {
-        const youtubeIframe = this.nextElementSibling.querySelector("iframe");
-        const src = youtubeIframe.getAttribute("src");
-
-        // hover 해제 시 autoplay 파라미터 제거 (선택 사항)
-        if (src.includes("autoplay=1")) {
-            youtubeIframe.setAttribute("src", src.replace("&autoplay=1", ""));
-        }
-    });
+    );
 });
-
 
 
 

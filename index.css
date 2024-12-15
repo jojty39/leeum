@@ -157,9 +157,11 @@ main .main-dream {
 main .main-dream .dream-list {
     position: relative; 
 }
-main .main-dream .dream-list li {}
-main .main-dream .dream-list li a {
+main .main-dream .dream-list li {
     display: flex;
+}
+main .main-dream .dream-list li a {
+
     margin-bottom: 32px;
 }
 main .main-dream .dream-list li a:hover h2 {
@@ -171,7 +173,7 @@ main .main-dream .dream-list li a h2 {
     font-size: var(--font-size-xxxl);
     height: 163px; line-height: 163px;
 }
-main .main-dream .dream-list li a img {
+main .main-dream .dream-list li img {
     width: 214px; height: 120px;
     width: 289px; height: 163px;
     /* padding: 0 24px 0 24px; */
