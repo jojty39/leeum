@@ -1,4 +1,5 @@
 
+
 // href='#' 클릭: 최상단 이동 방지
 $(document).ready(function () {
     $("a[href='#']").on("click", function (e) {
@@ -165,9 +166,13 @@ window.addEventListener("load", function () {
 });
 
 
+
+
+
 // main-display 가로스크롤 자동 활성화
 // GSAP와 ScrollTrigger 플러그인 활성화
 gsap.registerPlugin(ScrollTrigger);
+
 
 // main-display 스크롤 애니메이션 설정
 gsap.to(".display-list", {
@@ -213,18 +218,18 @@ $(function(){
             trigger:'main .main-artists .artists-list',
             start:'top 80%',
             end:'20% 100%',
-            scrub:2,
+            scrub:3,
             // markers:true
         }
     })
-    .to('main .main-artists .artists-list li:nth-child(1)',{y:'-400px', duration:1, ease:'none'}, 0.2)
-    .to('main .main-artists .artists-list li:nth-child(2)',{y:'-400px', duration:1, ease:'none'}, 0.4)
-    .to('main .main-artists .artists-list li:nth-child(3)',{y:'-400px', duration:1, ease:'none'}, 0.6)
-    .to('main .main-artists .artists-list li:nth-child(4)',{y:'-400px', duration:1, ease:'none'}, 0.8)
-    .to('main .main-artists .artists-list li:nth-child(5)',{y:'-400px', duration:1, ease:'none'}, 2.2)
-    .to('main .main-artists .artists-list li:nth-child(6)',{y:'-400px', duration:1, ease:'none'}, 2.4)
-    .to('main .main-artists .artists-list li:nth-child(7)',{y:'-400px', duration:1, ease:'none'}, 2.6)
-    .to('main .main-artists .artists-list li:nth-child(8)',{y:'-400px', duration:1, ease:'none'}, 2.8)
+    .fromTo('main .main-artists .artists-list li:nth-child(1)',{y:'200%'},{y:'0', duration:2.5, ease:'power1.inOut'}, 0.6)
+    .fromTo('main .main-artists .artists-list li:nth-child(2)',{y:'200%'},{y:'0', duration:2.5, ease:'power1.inOut'}, 0.8)
+    .fromTo('main .main-artists .artists-list li:nth-child(3)',{y:'200%'},{y:'0', duration:2.5, ease:'power1.inOut'}, 1.2)
+    .fromTo('main .main-artists .artists-list li:nth-child(4)',{y:'200%'},{y:'0', duration:2.5, ease:'power1.inOut'}, 1.4)
+    .fromTo('main .main-artists .artists-list li:nth-child(5)',{y:'200%'},{y:'0', duration:2.5, ease:'power1.inOut'}, 2.0)
+    .fromTo('main .main-artists .artists-list li:nth-child(6)',{y:'200%'},{y:'0', duration:2.5, ease:'power1.inOut'}, 2.2)
+    .fromTo('main .main-artists .artists-list li:nth-child(7)',{y:'200%'},{y:'0', duration:2.5, ease:'power1.inOut'}, 2.4)
+    .fromTo('main .main-artists .artists-list li:nth-child(8)',{y:'200%'},{y:'0', duration:2.5, ease:'power1.inOut'}, 2.6)
 });
 
 // main .main-record .record-list li
@@ -234,12 +239,14 @@ $(function(){
             trigger:'main .main-record .record-list',
             start:'top 80%',
             end:'20% 100%',
-            scrub:2,
+            scrub:3,
             // markers:true
         }
     })
-    .to('main .main-record .record-list li:first-child',{y:'-400px', duration:1, ease:'none'}, 0.2)
-    .to('main .main-record .record-list li:last-child ',{y:'-400px', duration:1, ease:'none'}, 0.4)
+    .fromTo('main .main-record .record-list li:first-child',{y:'200%', duration:2.5, ease:'power1.inOut'},{y:'0'}, 0.6)
+    .fromTo('main .main-record .record-list li:last-child',{y:'200%', duration:2.5, ease:'power1.inOut'},{y:'0'}, 0.8)
+
+
 
 });
 
@@ -250,11 +257,55 @@ $(function(){
             trigger:'main .main-curator',
             start:'top 90%',
             end:'20% 100%',
-            scrub:2,
-            markers:true
+            scrub:4,
+            // markers:true
         }
     })
-    .fromTo('main .main-curator .curator-did',{x:'800px', duration:1, ease:'none'},{x:'0'}, 1.4)
-    .fromTo('main .main-curator .curator-guide',{x:'-800px', duration:1, ease:'none'},{x:'0'}, 2.8)
+    .fromTo('main .main-curator .curator-did',{ x: '200%', opacity: 0 },{ x: '0', opacity: 1, duration: 2.5, ease: 'power2.out'}, 0.6)
+    .fromTo('main .main-curator .curator-guide',{ x: '-200%', opacity: 0 },{ x: '0', opacity: 1, duration: 2.5, ease: 'power2.out' }, 0.8)
 
 });
+
+//main .main-space ul li
+$(function(){
+    gsap.timeline({
+        scrollTrigger:{
+            trigger:'main .main-space ul',
+            start:'top 90%',
+            end:'20% 100%',
+            scrub:5,
+            // markers:true
+        }
+    })
+    .fromTo(
+        'main .main-space ul li:nth-child(1)', 
+        { opacity: 0, scale: 0.8 }, // 초기 상태: 투명하고 작음
+        { opacity: 1, scale: 1, duration: 2.5, ease: 'power1.inOut' }, // 나타나며 원래 크기로
+        0.4
+    )
+    .fromTo(
+        'main .main-space ul li:nth-child(2)', 
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 2.5, ease: 'power1.inOut' },
+        0.6
+    )
+    .fromTo(
+        'main .main-space ul li:nth-child(3)', 
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 2.5, ease: 'power1.inOut' },
+        1.0
+    )
+    .fromTo(
+        'main .main-space ul li:nth-child(4)', 
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 2.5, ease: 'power1.inOut' },
+        1.2
+    );
+    /*
+    .fromTo('main .main-space ul li:nth-child(1)',{x:'200%',opacity:0,scale:0.8},{x:'0',opacity:1,scale:1,duration:2.5, ease:'power1.inOut'}, 0.4)
+    .fromTo('main .main-space ul li:nth-child(2)',{x:'-200%',opacity:0,scale:0.8},{x:'0',opacity:1,scale:1, duration: 2.5, ease: 'power1.inOut' }, 0.6)
+    .fromTo('main .main-space ul li:nth-child(3)',{x:'200%', opacity: 0,scale:0.8},{ x:'0',opacity:1,scale:1, duration: 2.5, ease: 'power1.inOut'}, 1.0)
+    .fromTo('main .main-space ul li:nth-child(4)',{x:'-200%',opacity:0,scale:0.8},{x:'0',opacity:1,scale:1,duration:2.5, ease:'power1.inOut'}, 1.2)
+    */
+});
+
