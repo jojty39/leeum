@@ -174,6 +174,7 @@ window.addEventListener("load", function () {
 gsap.registerPlugin(ScrollTrigger);
 
 
+
 // main-display 스크롤 애니메이션 설정
 gsap.to(".display-list", {
     x: () => -(document.querySelector(".display-list").scrollWidth - document.querySelector(".main-display").clientWidth), // 전체 스크롤 길이 계산
@@ -199,7 +200,7 @@ $(function(){
             start:'top 20%',
             end:'60% 100%',
             scrub:3,
-            markers:true
+            // markers:true
         }
     })
     .fromTo(
