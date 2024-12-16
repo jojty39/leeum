@@ -174,7 +174,6 @@ window.addEventListener("load", function () {
 gsap.registerPlugin(ScrollTrigger);
 
 
-
 // main-display 스크롤 애니메이션 설정
 gsap.to(".display-list", {
     x: () => -(document.querySelector(".display-list").scrollWidth - document.querySelector(".main-display").clientWidth), // 전체 스크롤 길이 계산
@@ -225,17 +224,11 @@ $(function(){
         {x: "150%", y: "150%", z: 200,  opacity: 0, scale: 0.7,},
         {x: "0%", y: "0%", z: 0,  opacity: 1, scale: 1.2, duration: 3.4, ease: "power3.out",}
     )
-
-
     .fromTo(
         "main .main-masterpiecess .masterpiecess-list-center li:nth-child(2)",
         {x: "150%", y: "150%", z: 200,  opacity: 0, scale: 0.7,},
         {x: "0%", y: "0%", z: 0,  opacity: 1, scale: 1.2, duration: 3.6, ease: "power3.out",}
     )
-
-
-
-
     .fromTo(
         "main .main-masterpiecess .masterpiecess-list-bot li:nth-child(3)",
         {x: "-150%", y: "-150%", z: 200,  opacity: 0, scale: 0.7,},
@@ -358,3 +351,20 @@ $(function(){
     */
 });
 
+// GSAP ScrollTrigger를 활용하여 main-masterpiecess부터 끝까지 애니메이션 적용
+gsap.registerPlugin(ScrollTrigger);
+
+// main-masterpiecess부터 끝까지 적용
+gsap.to(".main-masterpiecess ~ .main", {
+  scrollTrigger: {
+    trigger: ".main-masterpiecess", // 트리거 기준을 main-masterpiecess로 설정
+    start: "top center", // 애니메이션 시작 지점
+    end: "bottom center", // 애니메이션 종료 지점
+    scrub: 3, // 스크롤과 연동
+    // markers: true,
+  },
+  y: -100, // 위로 이동
+  opacity: 1, // 투명도 애니메이션
+  ease: "power1.inOut", // 부드러운 이동 효과
+  duration: 1.5, // 애니메이션 지속 시간
+});

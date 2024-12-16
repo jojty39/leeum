@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 body {
     background-color: var(--color-dark1);
     color: var(--color-white1);
@@ -21,9 +20,10 @@ body {
     user-select: none;
     pointer-events: none;
     transition: transform 0.3s, opacity 0.2s;
+    mix-blend-mode: difference;
 }
 .cursor.active {
-    transform: scale(1.5);
+    transform: scale(1.8);
     background: rgba(255, 255, 255, 0.8);
     background: var(--color-white1);
 }
@@ -31,13 +31,14 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 12px; 
-    height: 12px;
+    width: 14px; 
+    height: 14px;
     background: var(--color-dark1);
     border: 1px solid var(--color-white1);
     border-radius: 50%;
     pointer-events: none;
     user-select: none;
+    mix-blend-mode: difference;
 }
 .cursor-inner.active {
     transform: scale(0.8);
@@ -202,9 +203,10 @@ main .main-dream .dream-list li .dream-youtube iframe  {
     /* right: 50%;  */
     bottom: 30%;
     left: 50%;
-
-
 }
+
+
+
 
 .dream-list li a:hover + .dream-youtube iframe {
     display: block; /* hover 시 동영상 표시 */
@@ -221,7 +223,9 @@ main .main-display {
     line-height: 1.6;
     letter-spacing: 1px;
     padding: 110px 100px 100px 110px;
-    cursor: url('./assets/images/main-display-free-icon-eye.png'), auto; /* 사용자 지정 커서 설정 */
+
+
+    mix-blend-mode: difference;
 
 }
 main .main-display .display-list {
@@ -249,11 +253,14 @@ main .main-display .display-list li {
     flex: 0 0 auto; /* 가로로 정렬된 요소가 줄바꿈되지 않도록 설정 */
     width: 300px; /* 각 카드의 고정 너비 */
     width: 853px;
-
+    /* cursor: url('./assets/images/main-display-free-icon-eye.png'), auto;  */
 
 }
 main .main-display .display-list li img {
     width: 853px; height: 480px;
+    cursor: pointer;
+    /* cursor: url('./assets/images/main-display-free-icon-eye.png'), auto;  */
+
 }
 main .main-display .display-list li img:hover {}
 main .main-display .display-list li h4 {
@@ -423,12 +430,7 @@ main .main-artists .artists-list li p {
     font-size: var(--font-size-ml);
     margin-top: 20px;
     text-align: left;
-    
 }
-
-
-
-
 
 
 
