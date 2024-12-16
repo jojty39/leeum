@@ -366,7 +366,7 @@ main .main-masterpiecess .masterpiecess-list-center {
 }
 main .main-masterpiecess .masterpiecess-list-top li:nth-child(2) {
     /* background-color: blueviolet; */
-    padding-bottom: 24px;
+    padding-bottom: 28px;
 }
 main .main-masterpiecess .masterpiecess-list-bot {
     justify-content: space-evenly;
@@ -374,15 +374,9 @@ main .main-masterpiecess .masterpiecess-list-bot {
 
 main .main-masterpiecess .masterpiecess-list-bot li:nth-child(2) {
     /* background-color: blueviolet; */
-    padding-top: 24px;
+    padding-top: 28px;
 }
 
-.masterpiecess-list-top,
-.masterpiecess-list-center,
-.masterpiecess-list-bot {
-    transform: scale(0.5); /* 초기 크기 */
-    opacity: 0; /* 초기 투명도 */
-}
 
 
 

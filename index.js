@@ -189,26 +189,76 @@ gsap.to(".display-list", {
 
 
 // main-masterpiecess 리스트 애니메이션 설정
-gsap.fromTo(
-    ".masterpiecess-list-top, .masterpiecess-list-center, .masterpiecess-list-bot",
-    {
-        scale: 0.5, // 작은 크기에서 시작
-        opacity: 0, // 투명하게 시작
-    },
-    {
-        scale: 1, // 원래 크기로 확장
-        opacity: 1, // 완전히 보이게
-        duration: 2, // 애니메이션 지속 시간
-        ease: "power2.out", // 부드러운 애니메이션
-        stagger: 0.5, // 리스트 간 시간 간격
-        scrollTrigger: {
-            trigger: ".main-masterpiecess", // 트리거 설정
-            start: "top 80%", // 트리거 시작 지점
-            end: "top 20%", // 트리거 종료 지점
-            scrub: true, // 스크롤에 따라 애니메이션 연동
-        },
-    }
-);
+// main .main-masterpiecess .masterpiecess-list-top li
+//main .main-masterpiecess .masterpiecess-list-center li
+// main .main-masterpiecess .masterpiecess-list-bot li
+$(function(){
+    gsap.timeline({
+        scrollTrigger:{
+            trigger:'main .main-masterpiecess',
+            start:'top 20%',
+            end:'60% 100%',
+            scrub:3,
+            markers:true
+        }
+    })
+    .fromTo(
+        "main .main-masterpiecess .masterpiecess-title",
+        { opacity: 0, scale: 0.5 }, // 초기 상태: 투명하고 작음
+        { opacity: 1, scale: 0.9, duration: 4, ease: 'expo.inOut'} // 나타나며 원래 크기로
+        
+    )
+
+    .fromTo(
+        "main .main-masterpiecess .masterpiecess-list-top li:nth-child(1)",
+        {x: "150%", y: "150%", z: 200,  opacity: 0, scale: 0.7,},
+        {x: "0%", y: "0%", z: 0,  opacity: 1, scale: 1.2, duration: 3, ease: "power3.out",}
+    )
+    .fromTo(
+        "main .main-masterpiecess .masterpiecess-list-top li:nth-child(2)",
+        {x: "150%", y: "150%", z: 200,  opacity: 0, scale: 0.7,},
+        {x: "0%", y: "0%", z: 0,  opacity: 1, scale: 1.2, duration: 3.2, ease: "power3.out",}
+    )
+    .fromTo(
+        "main .main-masterpiecess .masterpiecess-list-top li:nth-child(3)",
+        {x: "150%", y: "150%", z: 200,  opacity: 0, scale: 0.7,},
+        {x: "0%", y: "0%", z: 0,  opacity: 1, scale: 1.2, duration: 3.4, ease: "power3.out",}
+    )
+
+
+    .fromTo(
+        "main .main-masterpiecess .masterpiecess-list-center li:nth-child(2)",
+        {x: "150%", y: "150%", z: 200,  opacity: 0, scale: 0.7,},
+        {x: "0%", y: "0%", z: 0,  opacity: 1, scale: 1.2, duration: 3.6, ease: "power3.out",}
+    )
+
+
+
+
+    .fromTo(
+        "main .main-masterpiecess .masterpiecess-list-bot li:nth-child(3)",
+        {x: "-150%", y: "-150%", z: 200,  opacity: 0, scale: 0.7,},
+        {x: "0%", y: "0%", z: 0,  opacity: 1, scale: 1.2, duration: 3.8, ease: "power3.out",}
+    )
+    .fromTo(
+        "main .main-masterpiecess .masterpiecess-list-bot li:nth-child(2)",
+        {x: "-150%", y: "-150%", z: 200,  opacity: 0, scale: 0.7,},
+        {x: "0%", y: "0%", z: 0,  opacity: 1, scale: 1.2, duration: 4.0, ease: "power3.out",}
+    )
+    .fromTo(
+        "main .main-masterpiecess .masterpiecess-list-bot li:nth-child(1)",
+        {x: "-150%", y: "-150%", z: 200,  opacity: 0, scale: 0.7,},
+        {x: "0%", y: "0%", z: 0,  opacity: 1, scale: 1.2, duration: 4.2, ease: "power3.out",}
+    )
+
+    .fromTo(
+        "main .main-masterpiecess .masterpiecess-list-center li:nth-child(1)",
+        {x: "-50%", y: "-50%", z:200, opacity: 0, scale: 0.7,},
+        {x: "0%", y: "0%", z: 0,  opacity: 1, scale: 1.2, duration: 4.4, ease: "power3.out",}
+    );
+
+});
+
 
 
 // main-artists ul(artists-list) li
@@ -245,8 +295,6 @@ $(function(){
     })
     .fromTo('main .main-record .record-list li:first-child',{y:'200%', duration:2.5, ease:'power1.inOut'},{y:'0'}, 0.6)
     .fromTo('main .main-record .record-list li:last-child',{y:'200%', duration:2.5, ease:'power1.inOut'},{y:'0'}, 0.8)
-
-
 
 });
 
